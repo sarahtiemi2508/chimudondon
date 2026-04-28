@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styleHomeTaiko.css">
+        <link rel="icon" href="assets/imgs/taiko minimalista co.png">
+</head>
+
+<body style="background-color: white;">
+
+        <div class="header">
+        <img class="logo" src="assets/imgs/taiko minimalista co.png" alt="logo">
+        <div class="navBar">
+            <a href="index.html">
+            <button class="itensNavBar">HOME</button>
+        </a>
+            <div class="itensNavBar">|</div>
+            <a href="sobreTaiko.html">
+            <button class="itensNavBar">SOBRE</button>
+        </a>
+        </div>
+        <div class="loginCadastroHeader">
+            <a href="cadastroUsuarioTaiko.html">
+                <button class="botaoCadastroHeader" class="itensNavBar">Cadastro</button>
+            </a>
+            <a href="loginTaiko.html">
+                <button class="botaoLoginHeader" class="itensNavBar">Login</button>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="paginaLogin">
+        <div id="borderCadastro">
+            <h2 id="tituloCadastro">Cadastro</h2>
+            <div id="boxesCadastro">
+                <div class="conteudoBoxCadastro">
+                    <label class="labelCadastro">Insira seu nome completo</label><br>
+                    <input type="text" id="iptNomeCadastro" class="iptCadastro"><br>
+                    <label class="labelCadastro">Insira seu email</label><br>
+                    <input type="text" id="iptEmailCadastro" class="iptCadastro"><br>
+                    <label class="labelCadastro">Insira seu CPF</label><br>
+                    <input type="text" id="iptCpfCadastro" class="iptCadastro"><br>
+                </div>
+                <div class="conteudoBoxCadastro">
+                    <label class="labelCadastro">Faz parte de algum grupo de Taiko? Qual?</label><br>
+                    <input type="text" id="iptTaikoCadastro" class="iptCadastro"><br>
+                    <label class="labelCadastro">Crie uma senha</label><br>
+                    <input type="password" id="iptSenhaCadastro" class="iptCadastro"><br>
+                    <label class="labelCadastro">Confirme sua senha</label><br>
+                    <input type="password" id="iptConfirmarSenhaCadastro" class="iptCadastro"><br>
+                </div>
+            </div>
+            <div>
+            <button id="botaocadastrar" onclick="cadastrar()">Cadastrar</button>
+        </div>
+        <div id="temConta">
+                <div class="pergunta">Já tem uma conta?</div>
+
+                <a href="loginTaiko.html">
+                    <button id="encaminharCadastro" style="color: #EB0701;">Faça login</button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/sessao.js"></script>
+<script>
+  let listaEmpresasCadastradas = [];
+
+  function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = iptNomeCadastro.value;
+    var emailVar = iptEmailCadastro.value;
+    var senhaVar = iptSenhaCadastro.value;
+    var confirmacaoSenhaVar = iptConfirmarSenhaCadastro.value;
+    var cpfVar= iptCpfCadastro.value;
+    var grupoVar = iptTaikoCadastro.value;
+
+    // Verificando se há algum campo em branco
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == "" ||
+      cpfVar == "" ||
+      grupoVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+   
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+        grupoServer: grupoVar,
+        cpfServer: cpfVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "loginTaiko.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>
+</html>

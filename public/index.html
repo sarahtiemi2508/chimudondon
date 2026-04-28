@@ -3,80 +3,176 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AquaTech | Página Inicial</title>
-
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Home- Taiko</title>
+    <link rel="stylesheet" href="css/styleHomeTaiko.css">
+        <link rel="icon" href="assets/imgs/taiko minimalista co.png">
 </head>
 
 <body>
+
     <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+        <img class="logo" src="assets/imgs/taiko minimalista co.png" alt="logo">
+        <div class="navBar">
+            <a href="homeTaiko.html">
+            <button class="itensNavBar">HOME</button>
+        </a>
+            <div class="itensNavBar">|</div>
+            <a href="sobreTaiko.html">
+            <button class="itensNavBar">SOBRE</button>
+        </a>
         </div>
-      </div>
+        <div class="loginCadastroHeader">
+            <a href="cadastroUsuarioTaiko.html">
+                <button class="botaoCadastroHeader" class="itensNavBar">Cadastro</button>
+            </a>
+            <a href="loginTaiko.html">
+                <button class="botaoLoginHeader" class="itensNavBar">Login</button>
+            </a>
+        </div>
     </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-        <span class="version">v1.0.0</span>
-      </div>
+
+    <div id="banner">
+        <div id="boxTitulo">
+            <h1 class="tituloHome">CHIMU DONDON:</h1>
+            <h2 class="tituloHome">AS BATIDAS DO CORAÇÃO</h2>
+        </div>
     </div>
-  </body>
+
+    <div id="parte1">
+        <h2 id="tituloP1">HISTÓRIA DE OKINAWA</h2>
+        <div id="corpoP1">
+            <div id="boxResumo">
+                <div class="resumo"> Durante a 2ª Guerra Mundial, Okinawa ficou sob administração dos Estados Unidos,
+                    devido à localização estratégica e vantajosa contra o território japonês. De forma que o território
+                    virou o local de guerra de fato. Onde a tropa japonesa enviou navios, aviões e muitos soldados para
+                    se defender. </div>
+
+                <div class="resumo"> A Batalha de Okinawa, codinome ‘Operação Icerberg’, começou em abril de 1945, foram
+                    três meses de extrema violência, ficando conhecida como ‘Tufão de Aço’, sendo considerada a maior
+                    batalha marítimo-terrestre-aérea da história. Além de centenas de milhares de mortes militares,
+                    muitos civis foram mortos também. Assim, muitas pessoas fugiram de Okinawa e buscaram abrigo em
+                    outros países, sendo um deles o Brasil.</div>
+            </div>
+            <div class="imagensHome">
+                <img src="assets/imgs/imagem1BatalhaOki.webp"
+                    alt="imagemBatalhaOki" width="420px">
+                <img src="assets/imgs/imagem2BatalhaOki.jpg"
+                    alt="imagemBatalhaOki" width="420px">
+            </div>
+        </div>
+    </div>
+
+    <div id="parte2">
+
+        <h2 id="tituloP2">EISA TAIKO</h2>
+        <div id="boxCorpoP2">
+            <div class="imagensHome">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTB-_jM0D9tYhyCVedlU1eYphu8R3cxFA_OQ&s"
+                    alt="imagemBatalhaOki" width="420px">
+                <img src="assets/imgs/imagemTaiko2.webp"
+                    alt="imagemBatalhaOki" width="420px">
+            </div>
+            <div id="boxHistoriaTaiko">
+                <div class="historiaTaiko">Eisa Taiko tem origem em Okinawa, localizado na parte Sul do Japão, é uma
+                    arte folclórica combinando tambores e danças energéticas. Surgiu no Reino de Ryukyu, no século XVII
+                    para comemorar o Obon, feriado para homenagear ancestrais.</div>
+                <div class="historiaTaiko">O Taiko teve uma contribuição fundamental no momento pós-guerra de Okinawa,
+                    de forma que manteve a esperança de um recomeço e a união da população para reconstruir suas vidas.
+                    As músicas feitas na época são emocionantes e sempre citam os valores: gratidão, união, esperança e
+                    força. Um exemplo é a música Toki Wo Koe.</div>
+                <div class="historiaTaiko">A população Uchinanchu (nacionalidade de Okinawa) do Brasil mantém a cultura
+                    viva e a espalha com orgulho para que todos conheçam a história de superação e a força que os
+                    ancestrais tiveram para enfrentar um momento tão difícil.</div>
+
+                <!-- <div class="gruposTaiko">Atualmente, tem seis grupos de Eisa Taiko: -Ryuka Sousaku Eisa Taiko; -Yuriki
+                    no Kizuna; -Ryukyu Koku Matsuri Daiko; -Shinwa Eisa Daiko; -Kanansan Eisa; -Soukyou Eisa Daiko;
+                    -Kariyushi Eisa Daiko. </div> -->
+            </div>
+
+        </div>
+    </div>
+    <div id="parte3">
+        <h2 id="tituloPropostas">Nossa proposta:</h2>
+        <div id="boxPropostas">
+
+            <div class="propostas">
+                <img class='imagensPropostas' src="assets/imgs/imgIntegrar.svg" alt="imagemIntegração" width="60px">
+                <div class="topicos">Integração</div>
+                <div class="especificacaoPropostas">Integrar os grupos, de forma que todos estejam juntos pelo mesmo
+                    motivo: a preservação da cultura</div>
+            </div>
+
+            <div class="propostas">
+                <img class='imagensPropostas' src="assets/imgs/imgAprendizado.svg" alt="imagemAprendizado" width="60px">
+                <div class="topicos">Aprendizado</div>
+                <div class="especificacaoPropostas">Aprender e se encantar cada vez mais com a cultura</div>
+            </div>
+
+            <div class="propostas">
+                <img class='imagensPropostas' src="assets/imgs/imgCompartilhar.svg" alt="imagemCompartilhar" width="60px">
+                <div class="topicos">(Com)partilhar</div>
+                <div class="especificacaoPropostas">Compartilhar experiências e vivências, criando um ambiente mais
+                    harmonioso.</div>
+            </div>
+
+            <div class="propostas">
+                <img class='imagensPropostas' src="assets/imgs/imagemAtualizarse.svg" alt="imagemAtualizarse" width="60px">
+                <div class="topicos">Atualizar-se</div>
+                <div class="especificacaoPropostas">Ficar atualizado(a) com as novidades, festivais, apresentações,
+                    shows e diversos eventos da cultura. </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contato">
+        <div id="parte1Contato">
+            <h2 id="tituloContato">Ficou interessado?</h2>
+            <h3 id="fraseContato">Venha conhecer e se encantar!</h3>
+        </div>
+        <div id="parte2Contato">
+            <div id="boxContato">
+                <div>Faça seu cadastro!</div>
+                <button class="botoesContato">Cadastro</button>
+                <div>Já tem cadastro? Faça login</div>
+                <button class="botoesContato">Login</button>
+            </div>
+            <div id="contatenos">
+                <div>Ou contate-nos:</div>
+                <div id="divTelefone">
+                    <img src="assets/imgs/imgWhats.svg " alt="imgZap" width="20px">
+                    <div id="telefoneContato">(55)11 99999-9999</div>
+                </div>
+                <div id="divEmail">
+                    <img src="assets/imgs/imgEmail.svg" alt="imgZap" width="20px">
+                    <div id="emailContato">chimudondon@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <div id="blocoContato">
+            <div id="tituloBlocoContato">Contato</div>
+            <div id="telefone">(55)11 99999-9999</div>
+            <div id="email">chimudondon@gmail.com</div>
+        </div>
+
+        <div id="blocosFooter">
+            <div id="tituloNavegar">Navegações</div>
+            <button id="NavegarHome">Home</button>
+            <button id="NavegarSobre">Sobre</button>
+            <button id="NavegarCadastro">Cadastro</button>
+            <button id="NavegarLogin">Login</button>
+        </div>
+
+
+    </div>
+
+
+
+</body>
 
 </html>
