@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Conhecimento Cultura de Okinawa</title>
+    <link rel="stylesheet" href="css/styleHomeTaiko.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="headerPosLogin">
+
+        <div class="navBarPosLogin">
+
+            <div class="botaoAbre"><span class="material-symbols-outlined">menu</span></div>
+
+            <div class="boxLogoHeader">
+                <img class="imgLogo" src="assets/imgs/taiko minimalista co.png" alt="logo">
+                <div class="textoLogo">Chimu DonDon</div>
+            </div>
+            <a href="index.html">
+                <img class="imgSignOut" src="assets/imgs/imgSignOut.svg" alt="imgSignOut">
+            </a>
+        </div>
+    </div>
+
+    <nav class="menuLateral">
+        <div class="logoMenu"></div>
+        <div class="container">
+            <img class="logoMenu" src="assets/imgs/taiko minimalista co.png" alt="logoTaiko">
+            <h2 class="tituloMenu">MENU<div class="botaoFecha"><span class="material-symbols-outlined">close</span>
+                </div>
+            </h2>
+            <div class="boxBotoesMenu">
+                <a href=""></a>
+                <button class="botoesMenu">Comunidade</button>
+                <a href="quizTaiko.html">
+                <button class="botoesMenu">Quizes</button>
+            </a>
+                <a href="dashboard/dashboard.html">
+                    <button class="botoesMenu">Dashboard</button>
+                </a>
+                <button class="botoesMenu">Calendário</button>
+                <button class="botoesMenu">Perfil</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <h1 class="tituloTeste">Quanto você conhece da cultura de Okinawa?</h1>
+
+    <div class="boxesQuestoes">
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">1. Qual nome dos gritos de animação que os artistas fala durante as apresentações?</h3>
+            <img src="assets/imgs/imgReishi.jpeg" alt="ImagemReishi" style="width: 530px;">
+
+            <form id="testeReishi" class="boxResposta">
+                <div>
+                    <input type="radio" name="q1" id="opcao1Q1" value="a">
+                    <label for="opcao1Q2">Kyotsuke</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" id="opcao2Q1" value="b">
+                    <label for="opcao2Q2">Reishi/ Feishi</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" id="opcao3Q1" value="c">
+                    <label for="opcao3Q2">Shikodachi</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">2. Quais outras artes podem ser apresentadas junto com o Eisa Taiko?</h3>
+            <div id="imagensQ2">
+                <img src="assets/imgs/imgShishiKiji.jpeg" alt="ShishimaiKijimuna" style="width: 220px;">
+                <img src="assets/imgs/imgOdori.jpeg" alt="Odori" style="height: 200px;">
+            </div>
+            <form id="testeOutras" class="boxResposta">
+                <div>
+                    <input type="radio" name="q2" id="opcao1Q2" value="a">
+                    <label for="opcao1Q2">Odori</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" id="opcao2Q2" value="b">
+                    <label for="opcao2Q2">Shishimai</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" id="opcao3Q2" value="c">
+                    <label for="opcao3Q2">Orochi</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">3. O que o provérbio 'Ichariba Choode' significa?</h3>
+            <form id="testeProverbio" class="boxResposta">
+                <div>
+                    <input type="radio" name="q3" id="opcao1Q2" value="a">
+                    <label for="opcao1Q2">Uma vez que nos encontramos, somos todos irmãos</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" id="opcao2Q2" value="b">
+                    <label for="opcao2Q2">Nós nos damos bem com aqueles que se dão bem conosco</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" id="opcao3Q2" value="c">
+                    <label for="opcao3Q2">Pais e filhos ensinam um aos outros</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">4. Qual nome desse instrumento?</h3>
+            <img src="assets/imgs/imgSanshin.jpg" alt="imagemSanshin" style="width: 400px;">
+            <form id="testeSanshin" class="boxResposta">
+
+
+                <input type="radio" id="op1Q4" name="q4" value="a">
+                <label for="q4">Koto</label><br>
+
+                <input type="radio" id="op2Q4" name="q4" value="b">
+                <label for="q4">Sanshin</label><br>
+
+                <input type="radio" id="op3Q4" name="q4" value="c">
+                <label for="q4">Shamisen</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">5. Qual nome desse instrumento?</h3>
+            <img src="assets/imgs/imgKoto.jpg" alt="imagemKoto" style="width: 400px;">
+            <form id="testeKoto" class="boxResposta">
+
+
+                <input type="radio" id="op1Q5" name="q5" value="a">
+                <label for="q4">Koto</label><br>
+
+                <input type="radio" id="op2Q5" name="q5" value="b">
+                <label for="q4">Sanshin</label><br>
+
+                <input type="radio" id="op3Q5" name="q5" value="c">
+                <label for="q4">Shamisen</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">6. Qual arte marcial tem origem em Okinawa?</h3>
+            
+            <form id="testeKarate" class="boxResposta">
+
+
+                <input type="radio" id="op1Q6" name="q6" value="a">
+                <label for="q4">Karate</label><br>
+
+                <input type="radio" id="op2Q6" name="q6" value="b">
+                <label for="q4">Judo</label><br>
+
+                <input type="radio" id="op3Q6" name="q6" value="c">
+                <label for="q4">Aikido</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">7. Qual nome das entidades que protegem as casas?</h3>
+            <img src="assets/imgs/imgShisa.jpg" alt="imagemShisa" style="width: 400px;">
+            <form id="testeShisa" class="boxResposta">
+
+
+                <input type="radio" id="op1Q7" name="q7" value="a">
+                <label for="q7">Oni</label><br>
+
+                <input type="radio" id="op2Q7" name="q7" value="b">
+                <label for="q7">Daruma</label><br>
+
+                <input type="radio" id="op3Q7" name="q7" value="c">
+                <label for="q7">Shisa</label><br>
+
+
+            </form>
+        </div>
+        
+        <div class="boxQuestao">
+            <h3 class="pergunta">8. Qual é o legume típico conhecido por trazer longevidade?</h3>
+            <img src="assets/imgs/imgGoya.jpg" alt="imagemGoya" style="width: 400px;">
+            <form id="testeGoya" class="boxResposta">
+
+
+                <input type="radio" id="op1Q8" name="q8" value="a">
+                <label for="q4">Batata-doce</label><br>
+
+                <input type="radio" id="op2Q8" name="q8" value="b">
+                <label for="q4">Goya</label><br>
+
+                <input type="radio" id="op3Q8" name="q8" value="c">
+                <label for="q4">Alface</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">9. Qual nome do tecido nas imagens?</h3>
+            <img src="assets/imgs/imgBingata.jpg" alt="imagemBingata" style="width: 400px;">
+            <form id="testeBingata" class="boxResposta">
+
+
+                <input type="radio" id="op1Q9" name="q9" value="a">
+                <label for="q4">Reishugui</label><br>
+
+                <input type="radio" id="op2Q9" name="q9" value="b">
+                <label for="q4">Bingata</label><br>
+
+                <input type="radio" id="op3Q9" name="q9" value="c">
+                <label for="q4">Kimono</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestao">
+            <h3 class="pergunta">10. Qual é a capital de Okinawa?</h3>
+            
+            <form id="testeCapital" class="boxResposta">
+
+
+                <input type="radio" id="op1Q10" name="q10" value="a">
+                <label for="q4">Kyoto</label><br>
+
+                <input type="radio" id="op2Q10" name="q10" value="b">
+                <label for="q4">Tóquio</label><br>
+
+                <input type="radio" id="op3Q10" name="q10" value="c">
+                <label for="q4">Naha</label><br>
+
+
+            </form>
+        </div>
+
+
+
+        <button class="botaoVerificar" onclick="verificarConhecimento()">Finalizar teste!</button>
+    <div class="boxResultado">
+        <div id="resultadoMusica"></div><br>
+        <a href="testeMusica.html">
+        <button class="refazer">Refazer</button>
+    </a>
+    </div>
+
+
+</body>
+<script src="js/menu.js"></script>
+
+<script>
+
+function verificarConhecimento(){
+    let pontosConhecimento= 0;
+    
+    const respostasCertasConhecimento = {
+        q1: "b" ,
+        q2: "a",
+        q3: "a",
+        q4: "b",
+        q5: "a",
+        q6: "a",
+        q7: "c",
+        q8: "b",
+        q9: "b",
+        q10: "c"
+    }
+    
+    let formReishi = document.forms['testeReishi'];
+    let formOutras = document.forms['testeOutras'];
+    let formProverbio = document.forms['testeProverbio'];
+    let formSanshin = document.forms['testeSanshin'];
+    let formKoto = document.forms['testeKoto'];
+    let formKarate = document.forms['testeKarate'];
+    let formShisa = document.forms['testeShisa'];
+    let formGoya = document.forms['testeGoya'];
+    let formBingata = document.forms['testeBingata'];
+    let formCapital = document.forms['testeCapital'];
+
+    if (formReishi['q1'].value === respostasCertasConhecimento.q1) {
+        pontosConhecimento++;
+        console.log("passando pelo if1")
+    };
+    if (formOutras['q2'].value === respostasCertasConhecimento.q2) {
+        pontosConhecimento++;
+        console.log("passando pelo if2")
+    }
+    if (formProverbio['q3'].value === respostasCertasConhecimento.q3) {
+        pontosConhecimento++;
+        console.log("passando pelo if3")
+    }
+    if (formSanshin['q4'].value === respostasCertasConhecimento.q4) {
+        pontosConhecimento++;
+        console.log("passando pelo if4")
+    }
+    if (formKoto['q5'].value === respostasCertasConhecimento.q5) {
+        pontosConhecimento++;
+        console.log("passando pelo if5")
+    }
+    if (formKarate['q6'].value === respostasCertasConhecimento.q6) {
+        pontosConhecimento++;
+        console.log("passando pelo if6")
+    }
+    if (formShisa['q7'].value === respostasCertasConhecimento.q7) {
+        pontosConhecimento++;
+        console.log("passando pelo if7")
+    }
+    if (formGoya['q8'].value === respostasCertasConhecimento.q8) {
+        pontosConhecimento++;
+        console.log("passando pelo if8")
+    }
+    if (formBingata['q9'].value === respostasCertasConhecimento.q9) {
+        pontosConhecimento++;
+        console.log("passando pelo if9")
+    }
+    if (formCapital['q10'].value === respostasCertasConhecimento.q10) {
+        pontosConhecimento++;
+        console.log("passando pelo if10")
+    }
+
+    console.log(pontosConhecimento)
+
+resultadoMusica.innerHTML=`Sua pontuação: ${pontosConhecimento}`
+if(pontosConhecimento>7){
+    resultadoMusica.innerHTML+=`<br>Parabéns!<br> Você sabe muito sobre a cultura de Okinawa!`
+}else if(pontosConhecimento>5){
+    resultadoMusica.innerHTML+=`<br> Já conhece? <br> Venha aprender mais!`
+} else {
+    resultadoMusica.innerHTML+=`<br> Sinta-se convidado(a) para navegar no site para conhecer e se apaixonar!`
+}
+
+}
+
+</script>
+
+
+</html>

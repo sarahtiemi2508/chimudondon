@@ -5,40 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/dashboards.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="" href="../testeMusica.html">
+
+    <!-- MENU -->
+     <link rel="stylesheet" href="../css/styleHomeTaiko.css">
+     
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div>
-        <canvas id="myChart"></canvas>
+
+    <div class="headerPosLogin">
+        
+        <div class="navBarPosLogin">
+
+            <div class="botaoAbre"><span class="material-symbols-outlined">menu</span></div>
+            
+          <div class="boxLogoHeader">
+            <img class="imgLogo" src="../assets/imgs/taiko minimalista co.png" alt="logo">
+            <div class="textoLogo">Chimu DonDon</div>
+          </div>
+          <a href="../homeTaiko.html">
+            <img class="imgSignOut" src="../assets/imgs/imgSignOut.svg" alt="imgSignOut" >
+          </a>
+        </div>
     </div>
 
+    <nav class="menuLateral">
+        <div class="logoMenu"></div> 
+        <div class="container">
+            <img class="logoMenu" src="../assets/imgs/taiko minimalista co.png" alt="logoTaiko">
+            <h2 class="tituloMenu">MENU<div class="botaoFecha"><span class="material-symbols-outlined">close</span></div></h2>
+            <div class="boxBotoesMenu">
+                <a href=""></a> 
+                <button class="botoesMenu">Comunidade</button>
+                <a href="../quizTaiko.html">
+                <button class="botoesMenu">Quizes</button>
+            </a>
+                <a href="dashboard/dashboard.html">
+                    <button class="botoesMenu">Dashboard</button>
+                </a>
+                <button class="botoesMenu">Calendário</button>
+                <button class="botoesMenu">Perfil</button>
+            </div>
+            
+        </div>
+    </nav>
+    
+    
+    <div id="graficosP1">
+    <div id="graficoInstrumentosBox">
+        <canvas id="graficosInstrumentos" ></canvas>
+    </div>
+</div>
+    <div id="graficosDesempenho">
+        <div class="graficoQuizBox">
+            <canvas id="graficoQuizMusica" ></canvas>
+        </div>    
 
-
+        <div class="graficoQuizBox">
+            <canvas id="graficoQuizConhecimento" ></canvas>
+        </div>    
+    </div>
+    
 </body>
+<script src="../js/menu.js"></script>
 
 <script>
 
-  const labels=[
+  const labelsG1=[
     'Paranku',
     'Odaiko',
     'Shime',
     
   ];
-  const data={
-    labels:labels,
+  const dataG1={
+    labels:labelsG1,
     datasets:[{
-        label:'Porcentagem',
+        label:'Quantidade',
         backgroundColor: 'rgb(235, 7, 1)',
         borderColor: 'rgb(235, 7, 1)',
         data:[30, 40, 30],
         },
     ]
   };
-  const config={
+  const configG1={
     type: 'bar',
-    data: data,
+    data: dataG1,
     options:{
          maintainAspectRatio: false, // PERMITE QUE O GRÁFICO ESTIQUE NA VERTICAL
             responsive: true,
@@ -64,13 +120,142 @@
     }
   }
 
+  const labelsG2=[
+    'Tentativa 1',
+    'Tentativa 2',
+    'Tentativa 3',
+    
+  ];
+  const dataG2={
+    labels:labelsG2,
+    datasets:[{
+        label:'Pontos',
+        backgroundColor: 'rgb(235, 7, 1)',
+        borderColor: 'rgb(235, 7, 1)',
+        data:[8, 9, 10],
+        },
+    ]
+  };
+  const configG2={
+    type: 'line',
+    data: dataG2,
+    options:{
+         maintainAspectRatio: false, // PERMITE QUE O GRÁFICO ESTIQUE NA VERTICAL
+            responsive: true,
+            scales: {
+                y: {
+                    min: 0,
+                    max: 10,
+                    stacked: true
+
+                },
+                x: {
+                    stacked: true,
+                    offset: true
+                }
+
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Pontuação- Teste Música",
+                },
+            },
+    }
+  }
+
+  const labelsG3=[
+    'Tentativa 1',
+    'Tentativa 2',
+    'Tentativa 3',
+    
+  ];
+  const dataG3={
+    labels: labelsG3,
+    datasets:[{
+        label:'Pontos',
+        backgroundColor: 'rgb(235, 7, 1)',
+        borderColor: 'rgb(235, 7, 1)',
+        data:[8, 9, 10],
+        },
+    ]
+  };
+  const configG3={
+    type: 'line',
+    data: dataG3,
+    options:{
+         maintainAspectRatio: false, // PERMITE QUE O GRÁFICO ESTIQUE NA VERTICAL
+            responsive: true,
+            scales: {
+                y: {
+                    min: 0,
+                    max: 10,
+                    stacked: true
+
+                },
+                x: {
+                    stacked: true,
+                    offset: true
+                }
+
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Pontuação- Teste Música",
+                },
+            },
+    }
+  }
+
+
 </script>
 <script>
-const myChart= new Chart(
-    document.getElementById('myChart'),
-    config
+const graficosInstrumentos= new Chart(
+    document.getElementById('graficosInstrumentos'),
+    configG1
+)
+
+const graficoQuizMusica= new Chart(
+    document.getElementById('graficoQuizMusica'),
+    configG2
+)
+
+const graficoQuizConhecimento= new Chart(
+    document.getElementById('graficoQuizConhecimento'),
+    configG3
 )
 
 </script>
+<script src="../js/testeMusica.js"></script>
 
+<script>
+
+//      const ctx = document.getElementById('myChart2').getContext('2d');
+// const labels2=[
+//     'Tentativa 1',
+//     'Tentativa 2',
+//     'Tentativa 3',
+    
+//   ];
+//     var myChart = new Chart(ctx, {
+//       type: 'line', 
+//       data: { 
+//           labels: labels2, 
+//           datasets: [{ 
+//               label: 'Pontuação', 
+//               data: historicoPontos, 
+//               backgroundColor: [
+//                   'rgb(235, 7, 1)', 
+//               ],
+//               borderColor: [
+//                   'rgb(235, 7, 1)', 
+//               ],
+//               borderWidth: 1 
+//           }]
+//       },
+//   });
+
+
+</script>
 </html>

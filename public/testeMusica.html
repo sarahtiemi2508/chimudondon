@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste- Música</title>
+    <link rel="stylesheet" href="css/styleHomeTaiko.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="headerPosLogin">
+
+        <div class="navBarPosLogin">
+
+            <div class="botaoAbre"><span class="material-symbols-outlined">menu</span></div>
+
+            <div class="boxLogoHeader">
+                <img class="imgLogo" src="assets/imgs/taiko minimalista co.png" alt="logo">
+                <div class="textoLogo">Chimu DonDon</div>
+            </div>
+            <a href="index.html">
+                <img class="imgSignOut" src="assets/imgs/imgSignOut.svg" alt="imgSignOut">
+            </a>
+        </div>
+    </div>
+
+    <nav class="menuLateral">
+        <div class="logoMenu"></div>
+        <div class="container">
+            <img class="logoMenu" src="assets/imgs/taiko minimalista co.png" alt="logoTaiko">
+            <h2 class="tituloMenu">MENU<div class="botaoFecha"><span class="material-symbols-outlined">close</span>
+                </div>
+            </h2>
+            <div class="boxBotoesMenu">
+                <a href=""></a>
+                <button class="botoesMenu">Comunidade</button>
+                <a href="quizTaiko.html">
+                <button class="botoesMenu">Quizes</button>
+            </a>
+                <a href="dashboard/dashboard.html">
+                    <button class="botoesMenu">Dashboard</button>
+                </a>
+                <button class="botoesMenu">Calendário</button>
+                <button class="botoesMenu">Perfil</button>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <h1 class="tituloTeste">Você conhece essa música?</h1>
+
+    <div class="boxesQuestoes">
+
+        <div class="boxQuestaoMusica">
+            <h3 class="tituloRegras">Regras:</h3>
+
+            <div class="boxRegras">
+                <div class="regra">1. Escute 25 segundos do trecho da música e coloque seu palpite</div>
+
+            </div>
+
+        </div>
+
+        <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">1ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/sagaribana.mpeg">
+            </audio>
+
+            <form id="testeSagaribana" class="boxResposta">
+
+                <input type="radio" id="op1Q1" name="q1" value="a">
+                <label for="q4">Okinawa Breeze</label><br>
+
+                <input type="radio" id="op2Q1" name="q1" value="b">
+                <label for="q4">Sagaribana</label><br>
+
+                <input type="radio" id="op3Q1" name="q1" value="c">
+                <label for="q4">Miruku Munari</label><br>
+
+            </form>
+        </div>
+
+        <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">2ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/shima.mpeg">
+            </audio>
+            <form id="testeShima" class="boxResposta">
+
+                <input type="radio" id="op1Q2" name="q2" value="a">
+                <label for="q4">Shimanchu nu Takara</label><br>
+
+                <input type="radio" id="op2Q2" name="q2" value="b">
+                <label for="q4">Oji Jiman No Orion Biru</label><br>
+
+                <input type="radio" id="op3Q2" name="q2" value="c">
+                <label for="q4">Shima</label><br>
+            </form>
+        </div>
+
+        <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">3ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/orionBiru.mpeg">
+            </audio>
+            <form id="testeOrionBiru" class="boxResposta">
+                <input type="radio" id="op1Q3" name="q3" value="a">
+                <label for="q4">Oji Jiman No Orion Biru</label><br>
+
+                <input type="radio" id="op2Q3" name="q3" value="b">
+                <label for="q4">Shima Uta</label><br>
+
+                <input type="radio" id="op3Q3" name="q3" value="c">
+                <label for="q4">Shishi no Gotoku</label><br>
+            </form>
+        </div>
+
+        <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">4ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/kazeNiNosete.mpeg">
+            </audio>
+            <form id="testeKazeNiNosete" class="boxResposta">
+
+
+                <input type="radio" id="op1Q4" name="q4" value="a">
+                <label for="q4">Kaze Ni Nosete</label><br>
+
+                <input type="radio" id="op2Q4" name="q4" value="b">
+                <label for="q4">Kariyushi no Uta</label><br>
+
+                <input type="radio" id="op3Q4" name="q4" value="c">
+                <label for="q4">Shamisen</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">5ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/umui.mpeg">
+            </audio>
+            <form id="testeUmui" class="boxResposta">
+
+
+                <input type="radio" id="op1Q5" name="q5" value="a">
+                <label for="q4">Ichimadin</label><br>
+
+                <input type="radio" id="op2Q5" name="q5" value="b">
+                <label for="q4">Shinkanucha</label><br>
+
+                <input type="radio" id="op3Q5" name="q5" value="c">
+                <label for="q4">Umui</label><br>
+
+
+            </form>
+        </div>
+
+                <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">6ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/kaeruBasho.mpeg">
+            </audio>
+            <form id="testeKaeruBasho" class="boxResposta">
+
+
+                <input type="radio" id="op1Q6" name="q6" value="a">
+                <label for="q4">Kaeru Basho</label><br>
+
+                <input type="radio" id="op2Q6" name="q6" value="b">
+                <label for="q4">Sanshin no Hana</label><br>
+
+                <input type="radio" id="op3Q6" name="q6" value="c">
+                <label for="q4">Toki no Tsurugi</label><br>
+
+
+            </form>
+        </div>
+
+                <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">7ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/hikariNoTane.mpeg">
+            </audio>
+            <form id="testeHikariNoTane" class="boxResposta">
+
+
+                <input type="radio" id="op1Q7" name="q7" value="a">
+                <label for="q4">Nmarijima</label><br>
+
+                <input type="radio" id="op2Q7" name="q7" value="b">
+                <label for="q4">Umui</label><br>
+
+                <input type="radio" id="op3Q7" name="q7" value="c">
+                <label for="q4">Hikari No Tane</label><br>
+
+
+            </form>
+        </div>
+
+        <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">8ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/kajimaai.mpeg">
+            </audio>
+            <form id="testeKajimaai" class="boxResposta">
+
+
+                <input type="radio" id="op1Q8" name="q8" value="a">
+                <label for="q4">Gaifu</label><br>
+
+                <input type="radio" id="op2Q8" name="q8" value="b">
+                <label for="q4">Kajimaai</label><br>
+
+                <input type="radio" id="op3Q8" name="q8" value="c">
+                <label for="q4">Eisa no Yoru</label><br>
+
+
+            </form>
+        </div>
+
+                <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">9ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/sanshinKatateni.mpeg">
+            </audio>
+            <form id="testeSanshinKatateni" class="boxResposta">
+
+
+                <input type="radio" id="op1Q9" name="q9" value="a">
+                <label for="q4">Dynamic Ryukyu</label><br>
+
+                <input type="radio" id="op2Q9" name="q9" value="b">
+                <label for="q4">Sanshin Katateni</label><br>
+
+                <input type="radio" id="op3Q9" name="q9" value="c">
+                <label for="q4">Eisa No Yoru</label><br>
+
+
+            </form>
+        </div>
+
+                <div class="boxQuestaoMusica">
+            <h3 class="perguntaMusica">10ª Música:</h3>
+            <audio controls>
+                <source src="assets/audio/muruUchina.mpeg">
+            </audio>
+            <form id="testeMuruUchina" class="boxResposta">
+
+
+                <input type="radio" id="op1Q10" name="q10" value="a">
+                <label for="q4">Muru Uchina</label><br>
+
+                <input type="radio" id="op2Q10" name="q10" value="b">
+                <label for="q4"></label>Uchinanchu Yaibin<br>
+
+                <input type="radio" id="op3Q10" name="q10" value="c">
+                <label for="q4">Shimanchu Nu Takara</label><br>
+
+
+            </form>
+        </div>
+
+
+        <button class="botaoVerificar" onclick="mostrarResultado()">Finalizar teste!</button>
+        <div class="boxResultado">
+        <div id="resultadoMusica"></div><br>
+        <a href="testeMusica.html">
+        <button class="refazer">Refazer</button>
+    </a>
+    </div>
+    </div>
+
+</body>
+<script src="js/menu.js"></script>
+
+<script src="js/testeMusica.js"></script>
+
+<script>
+
+function mostrarResultado(){
+
+    resultadoMusica.innerHTML= verificarMusica();
+
+}
+
+</script>
+
+</html>

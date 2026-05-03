@@ -6,6 +6,11 @@
 }
 body{
     background-color: #F9E7BE;
+
+}
+
+button{
+    cursor: pointer;
 }
 .header{
     top: 0;
@@ -734,14 +739,47 @@ align-items: center;
 
 /* Menu Lateral */
 
+.botaoAbre{
+    /* position: absolute; */
+    top: 20px;
+    margin-left: 20px;
+    color: #F8D698;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+.botaoFecha{
+    margin-left: 30px ;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
 .container{
     background-color: #EB0701;
     width: 220px;
-    height: 800px;
+    height: 820px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-evenly; */
+    position: fixed;
+    left: -220px;
+    z-index: 100;
+    margin-top: none;
+}
+
+.container.mostra{
+    left: 0;
+}
+
+.tituloMenu{
+    margin-top: 10px;
+    color: #F8D698;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
 }
 
 .logoMenu{
@@ -752,8 +790,7 @@ align-items: center;
 .boxBotoesMenu{
     display: flex;
     flex-direction: column;
-    border: white solid 2px;
-    height: 440px;
+    height: 420px;
     justify-content: space-evenly;
 }
 
@@ -765,6 +802,8 @@ align-items: center;
     color: #F8D698;
 
 }
+
+
 
 /* Página Pós Login */
 
@@ -780,6 +819,7 @@ align-items: center;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0px;
 }
 
 .navBarPosLogin{
@@ -824,4 +864,207 @@ width: 25px;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+}
+
+/* DASHBOARD */
+#myChart{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+#graficoInstrumentosBox{
+    width: 400px;
+    height: 400px;
+}
+
+.graficoQuizBox{
+    width: 400px;
+    height: 400px;
+}
+
+#graficosDesempenho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+/* QUIZ E TESTE DE PERSONALIDADE */
+
+#tituloQuiz{
+    color: #EB0701;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#boxesQuiz{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.boxQuiz{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nomeTipo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nomeQuiz{
+margin-left: 5px;
+margin-right: 5px;
+
+}
+
+.tipoQuiz{
+    color: #EB011D;
+}
+
+/* QUIZ DE CONHECIMENTO DE OKINAWA E MÚSICAS */
+
+.tituloTeste{
+    color: #EB0701;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.boxesQuestoes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.boxResposta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.pergunta{
+
+    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+#imagensQ2{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.boxQuestao{
+width: 620px;
+height: 400px;
+background-color: white;
+border-radius: 60px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.botaoVerificar{
+    width: 110px;
+    height: 35px;
+    background-color: #EB0701;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+
+/* TESTE MÚSICA */
+
+.tituloRegras{
+        color: #EB0701;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+/* .boxRegras{
+
+} */
+
+.boxQuestaoMusica{
+width: 620px;
+height: 260px;
+background-color: white;
+border-radius: 60px;
+display: flex;
+flex-direction: column;
+align-items: center;    
+}
+
+.perguntaMusica{
+    color:#EB0701 ;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+audio{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.boxResultado{
+background-color: white;
+color: #EB0701;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 300px;
+height: 150px;
+border-radius: 20px;
+}
+#resultadoMusica{
+width: 250px;
+height: 100px;
+}
+
+.refazer{
+    border: none;
+    color: #EB0701;
+    background-color: none;
+
 }

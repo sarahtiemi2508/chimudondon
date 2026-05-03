@@ -1,7 +1,7 @@
-function toggleMenu() {
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
+$('.botaoAbre').click(function(){
+  $('.container').toggleClass('mostra');
+});
 
-  sidebar.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+$('.botaoFecha').click(function(){
+  $('.container').toggleClass('mostra');
+});
