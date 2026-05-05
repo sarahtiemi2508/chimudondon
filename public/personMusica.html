@@ -74,7 +74,7 @@
             <h3 class="perguntaMusica">1. Qual sentimento mais te representa?</h3>
             
 
-            <form class="boxResposta">
+            <form id="testeSentimento" class="boxResposta">
 
                 <input type="radio" id="op1Q4" name="questao4" value="a">
                 <label for="q4">Felicidade</label><br>
@@ -91,7 +91,7 @@
         <div class="boxQuestaoMusica">
             <h3 class="perguntaMusica">2. O que você faz no seu tempo livre?</h3>
 
-            <form class="boxResposta">
+            <form id="testeTempoLivre" class="boxResposta">
 
                 <input type="radio" id="op1Q4" name="questao4" value="a">
                 <label for="q4">Saio com minha família e amigos</label><br>
@@ -105,24 +105,24 @@
         </div>
 
         <div class="boxQuestaoMusica">
-            <h3 class="perguntaMusica">3. </h3>
+            <h3 class="perguntaMusica">3. Onde você gostaria de passar as férias?</h3>
           
-            <form class="boxResposta">
+            <form id="testeFerias" class="boxResposta">
                 <input type="radio" id="op1Q4" name="questao4" value="a">
-                <label for="q4">Shima Uta</label><br>
+                <label for="q4">Praia</label><br>
 
                 <input type="radio" id="op2Q4" name="questao4" value="b">
-                <label for="q4">Oji Jiman No Orion Biru</label><br>
+                <label for="q4">Cidade</label><br>
 
                 <input type="radio" id="op3Q4" name="questao4" value="c">
-                <label for="q4">Shishi no Gotoku</label><br>
+                <label for="q4">Campo</label><br>
             </form>
         </div>
 
         <div class="boxQuestaoMusica">
             <h3 class="perguntaMusica">4ª Música:</h3>
           
-            <form class="boxResposta">
+            <form id="testeSentimento" class="boxResposta">
 
 
                 <input type="radio" id="op1Q4" name="questao4" value="a">
@@ -157,111 +157,81 @@
             </form>
         </div>
 
-                <div class="boxQuestaoMusica">
-            <h3 class="perguntaMusica">6ª Música:</h3>
-          
-            <form class="boxResposta">
 
-
-                <input type="radio" id="op1Q5" name="questao5" value="a">
-                <label for="q4">Kaeru Basho</label><br>
-
-                <input type="radio" id="op2Q5" name="questao5" value="b">
-                <label for="q4">Sanshin no Hana</label><br>
-
-                <input type="radio" id="op3Q5" name="questao5" value="c">
-                <label for="q4">Toki no Tsurugi</label><br>
-
-
-            </form>
-        </div>
-
-                <div class="boxQuestaoMusica">
-            <h3 class="perguntaMusica">7ª Música:</h3>
-          
-            <form class="boxResposta">
-
-
-                <input type="radio" id="op1Q5" name="questao5" value="a">
-                <label for="q4">Nmarijima</label><br>
-
-                <input type="radio" id="op2Q5" name="questao5" value="b">
-                <label for="q4">Umui</label><br>
-
-                <input type="radio" id="op3Q5" name="questao5" value="c">
-                <label for="q4">Hikari No Tane</label><br>
-
-
-            </form>
-        </div>
-
-        <div class="boxQuestaoMusica">
-            <h3 class="perguntaMusica">8ª Música:</h3>
-          
-            <form class="boxResposta">
-
-
-                <input type="radio" id="op1Q5" name="questao5" value="a">
-                <label for="q4">Koto</label><br>
-
-                <input type="radio" id="op2Q5" name="questao5" value="b">
-                <label for="q4">Sanshin</label><br>
-
-                <input type="radio" id="op3Q5" name="questao5" value="c">
-                <label for="q4">Shamisen</label><br>
-
-
-            </form>
-        </div>
-
-                <div class="boxQuestaoMusica">
-            <h3 class="perguntaMusica">9ª Música:</h3>
-          
-            <form class="boxResposta">
-
-
-                <input type="radio" id="op1Q5" name="questao5" value="a">
-                <label for="q4">Sanshin Katateni</label><br>
-
-                <input type="radio" id="op2Q5" name="questao5" value="b">
-                <label for="q4">Dynamic Ryukyu</label><br>
-
-                <input type="radio" id="op3Q5" name="questao5" value="c">
-                <label for="q4">Eisa No Yoru</label><br>
-
-
-            </form>
-        </div>
-
-                <div class="boxQuestaoMusica">
-            <h3 class="perguntaMusica">10ª Música:</h3>
-          
-            <form class="boxResposta">
-
-
-                <input type="radio" id="op1Q5" name="questao5" value="a">
-                <label for="q4">Koto</label><br>
-
-                <input type="radio" id="op2Q5" name="questao5" value="b">
-                <label for="q4"></label><br>
-
-                <input type="radio" id="op3Q5" name="questao5" value="c">
-                <label for="q4">Muru Uchina</label><br>
-
-
-            </form>
-        </div>
 
 
         <button class="botaoVerificar" onclick="verificarMusica()">Finalizar teste!</button>
-
+        <div class="boxResultado">
+            <div id="resultadoMusica"></div><br>
+            <a href="personMusica.html">
+                <button class="refazer">Refazer</button>
+            </a>
+        </div>
     </div>
 
 </body>
 <script src="js/menu.js"></script>
 
 <script>
- 
+ function verificarMusica(){
+
+    let formSentimento = document.forms['testeSentimento'];
+    let formTempoLivre = document.forms['testeTempoLivre'];
+    let formFerias = document.forms['testeFerias'];
+    let form = document.forms['testeEstilo'];
+    let forma = document.forms['testeApresentacao'];
+
+    let OrionBiru=0;
+    let 
+
+
+if(formSentimento['q1'].value == "a"){
+        shime++
+    } else if (formSentimento['q1'].value == "b"){
+        paranku++
+    } else if (formSentimento['q1'].value == "c"){
+        odaiko++
+    }
+
+    if(formMovimento['q2'].value == "a"){
+        paranku++
+    } else if(formMovimento['q2'].value == "b"){
+        shime++
+    } else if(formMovimento['q2'].value == "c"){
+        odaiko++
+    }
+
+        if(formForca['q3'].value == "a"){
+        paranku++
+    } else if(formForca['q3'].value == "b"){
+        shime++
+    } else if(formForca['q3'].value == "c"){
+        odaiko++
+    }
+
+        if(formEstilo['q4'].value == "a"){
+        odaiko++
+    } else if(formEstilo['q4'].value == "b"){
+        shime++
+    } else if(formEstilo['q4'].value == "c"){
+        paranku++
+    }
+
+        if(formApresentacao['q5'].value == "a"){
+        paranku++
+    } else if(formApresentacao['q5'].value == "b"){
+        shime++
+    } else if(formApresentacao['q5'].value == "c"){
+        odaiko++
+    }
+
+
+
+    if(musica='Oji Jiman No Orion Biru'){
+        resultadoMusica.innerHTML=`Parabéns! Sua música é Oji Jiman  No Orion Biru`
+    }
+
+ }
 
 </script>
 
