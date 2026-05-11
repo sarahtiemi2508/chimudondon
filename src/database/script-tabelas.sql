@@ -6,40 +6,59 @@
 comandos para mysql server
 */
 
-CREATE DATABASE aquatech;
+--------------------------------
+-- CONFIGURANDO BANCO DE DADOS--
+--------------------------------
+USE projindiv;
+SHOW TABLES;
 
-USE aquatech;
+--------------------
+-- CRIANDO TABELAS--
+--------------------
 
-CREATE TABLE empresa (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50),
-	cnpj CHAR(14),
-	codigo_ativacao VARCHAR(50)
+CREATE TABLE usuario(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(60),
+email VARCHAR(60),
+cpf CHAR(11),
+grupoTaiko VARCHAR(100),
+senha VARCHAR(50)
 );
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+CREATE TABLE testePersonalidade(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100),
+dtTentativa DATETIME,
+resultado VARCHAR(50)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+CREATE TABLE usuarioTP(
+fkTP INT,
+fkUsuario INT,
+CONSTRAINT ctFkTP
+FOREIGN KEY (fkTP)
+REFERENCES testePersonalidade (id),
+CONSTRAINT ctFkUsuarioTP
+FOREIGN KEY (fkUsuario)
+REFERENCES usuario(id)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+CREATE TABLE quiz(
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100),
+dtTentativa DATETIME,
+pontos INT
+);
+
+CREATE TABLE usuarioQuiz(
+fkQuiz INT,
+fkUsuario INT,
+CONSTRAINT ctFkQuiz
+FOREIGN KEY (fkQuiz)
+REFERENCES quiz(id),
+CONSTRAINT ctFkUsuarioQuiz
+FOREIGN KEY (fkUsuario)
+REFERENCES usuario(id)
 );
 
 /* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
@@ -56,7 +75,3 @@ create table medida (
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
 
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);

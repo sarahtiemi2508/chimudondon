@@ -37,16 +37,14 @@
                 </div>
             </h2>
             <div class="boxBotoesMenu">
-                <a href=""></a>
-                <button class="botoesMenu">Comunidade</button>
+
                 <a href="quizTaiko.html">
                 <button class="botoesMenu">Quizes</button>
             </a>
                 <a href="dashboard/dashboard.html">
                     <button class="botoesMenu">Dashboard</button>
                 </a>
-                <button class="botoesMenu">Calendário</button>
-                <button class="botoesMenu">Perfil</button>
+
             </div>
 
         </div>
@@ -72,51 +70,35 @@
 
         <div class="boxQuestaoMusica">
             <h3 class="perguntaMusica">1. Qual sentimento mais te representa?</h3>
-            
+            <select id="testeSentimento" class="boxResposta">
+                <option value="Selecionar">Selecionar</option>
+                <option value="Felicidade">Felicidade</option>
+                <option value="União">União</option>
+                <option value="Esperança">Esperança</option>
+            </select><br>
 
-            <form id="testeSentimento" class="boxResposta">
 
-                <input type="radio" id="op1Q4" name="questao4" value="a">
-                <label for="q4">Felicidade</label><br>
-
-                <input type="radio" id="op2Q4" name="questao4" value="b">
-                <label for="q4">União</label><br>
-
-                <input type="radio" id="op3Q4" name="questao4" value="c">
-                <label for="q4">Esperança</label><br>
-
-            </form>
         </div>
 
         <div class="boxQuestaoMusica">
             <h3 class="perguntaMusica">2. O que você faz no seu tempo livre?</h3>
-
-            <form id="testeTempoLivre" class="boxResposta">
-
-                <input type="radio" id="op1Q4" name="questao4" value="a">
-                <label for="q4">Saio com minha família e amigos</label><br>
-
-                <input type="radio" id="op2Q4" name="questao4" value="b">
-                <label for="q4">Saio para beber cerveja</label><br>
-
-                <input type="radio" id="op3Q4" name="questao4" value="c">
-                <label for="q4">Toco Taiko para preservar a cultura</label><br>
-            </form>
+            <select id="testeTempoLivre" class="boxResposta">
+                <option value="Selecionar">Selecionar</option>
+                <option value="Familia/amigos">Saio com minha família e amigos</option>
+                <option value="Cerveja">Saio para beber cerveja</option>
+                <option value="Taiko">Toco Taiko para preservar a cultura</option>
+            </select><br>
         </div>
 
         <div class="boxQuestaoMusica">
             <h3 class="perguntaMusica">3. Onde você gostaria de passar as férias?</h3>
-          
-            <form id="testeFerias" class="boxResposta">
-                <input type="radio" id="op1Q4" name="questao4" value="a">
-                <label for="q4">Praia</label><br>
+            <select id="testeFerias" class="boxResposta">
+                <option value="Selecionar">Selecionar</option>
+                <option value="Praia">Praia</option>
+                <option value="Cidade">Cidade</option>
+                <option value="Campo">Campo</option>
+            </select><br>
 
-                <input type="radio" id="op2Q4" name="questao4" value="b">
-                <label for="q4">Cidade</label><br>
-
-                <input type="radio" id="op3Q4" name="questao4" value="c">
-                <label for="q4">Campo</label><br>
-            </form>
         </div>
 
         <div class="boxQuestaoMusica">
@@ -175,37 +157,32 @@
 <script>
  function verificarMusica(){
 
-    let formSentimento = document.forms['testeSentimento'];
-    let formTempoLivre = document.forms['testeTempoLivre'];
-    let formFerias = document.forms['testeFerias'];
-    let form = document.forms['testeEstilo'];
-    let forma = document.forms['testeApresentacao'];
-
-    let OrionBiru=0;
-    let 
+    let OrionBiru = 0;
+    let Sagaribana = 0;
+    let Shima = 0;
 
 
-if(formSentimento['q1'].value == "a"){
-        shime++
-    } else if (formSentimento['q1'].value == "b"){
+if(testeSentimento.value == "Felicidade"){
+        OrionBiru++
+    } else if (testeSentimento.value == "União"){
         paranku++
-    } else if (formSentimento['q1'].value == "c"){
-        odaiko++
+    } else if (formSentimento['q1'].value == "Esperança"){
+        Sagaribana++
     }
 
-    if(formMovimento['q2'].value == "a"){
+    if(testeTempoLivre.value == "Familia/amigos"){
         paranku++
-    } else if(formMovimento['q2'].value == "b"){
+    } else if(testeTempoLivre.value == "Cerveja"){
         shime++
-    } else if(formMovimento['q2'].value == "c"){
-        odaiko++
+    } else if(testeTempoLivre.value == "Taiko"){
+        Shima++
     }
 
-        if(formForca['q3'].value == "a"){
-        paranku++
-    } else if(formForca['q3'].value == "b"){
-        shime++
-    } else if(formForca['q3'].value == "c"){
+        if(testeFerias.value == "Praia"){
+        Sagaribana++
+    } else if(testeFerias.value == "Cidade"){
+        OrionBiru++
+    } else if(testeFerias.value == "Campo"){
         odaiko++
     }
 

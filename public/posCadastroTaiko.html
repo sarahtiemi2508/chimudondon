@@ -34,23 +34,21 @@
             <img class="logoMenu" src="assets/imgs/taiko minimalista co.png" alt="logoTaiko">
             <h2 class="tituloMenu">MENU<div class="botaoFecha"><span class="material-symbols-outlined">close</span></div></h2>
             <div class="boxBotoesMenu">
-                <a href=""></a> 
-                <button class="botoesMenu">Comunidade</button>
+
                 <a href="quizTaiko.html">
                 <button class="botoesMenu">Quizes</button>
             </a>
                 <a href="dashboard/dashboard.html">
                     <button class="botoesMenu">Dashboard</button>
                 </a>
-                <button class="botoesMenu">Calendário</button>
-                <button class="botoesMenu">Perfil</button>
+
             </div>
             
         </div>
     </nav>
 
 
-    <h2 id="saudacoes">Muito bom te ver aqui, usuário!</h2>
+    <h2 id="saudacoes">Muito bom te ver aqui, <span id="b_usuario">usuário</span>!</h2>
 
 <div class="pesquisa">
             <h3 class="pergunta" style="margin-top: 8px;">Qual instrumento você toca?</h3>
@@ -75,4 +73,9 @@
 
 </body>
 <script src="js/menu.js"></script>
+
+<script>
+b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+</script>
 </html>
